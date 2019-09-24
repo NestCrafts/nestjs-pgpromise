@@ -10,7 +10,7 @@ import { NestPgpromiseModule } from '../nest-pgpromise.module';
         host: 'raja.db.elephantsql.com',
         port: 5432,
         database: 'cmdbbtbi',
-        user: 'cmdbbtbi',
+        user: 'cmadbbtbi',
         password: 'cghQZynG0whwtGki-ci2bpxV5Jw_5k6z',
       },
     }),

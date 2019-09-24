@@ -22,7 +22,19 @@ export class NestPgpromiseService implements INestPgpromiseService {
 
   async getPg(): Promise<any> {
     if (!this._pgConnection) {
-      const pgp = pg(this._NestPgpromiseOptions.initOptions);
+      const self = this;
+      const initOptions = {
+        ...this._NestPgpromiseOptions.initOptions,
+        ...{
+          error(error, e) {
+            if (e.cn) {
+              self.logger.error('EVENT:', error.message || error);
+            }
+          },
+        },
+      };
+
+      const pgp = pg(initOptions);
       this._pgConnection = pgp(this._NestPgpromiseOptions.connection);
     }
     return this._pgConnection;
