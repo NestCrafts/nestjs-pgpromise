@@ -6,9 +6,9 @@
 <p align="center">pg-promise Module for Nest framework</p>
 
 <p align="center">
-<a href="https://www.npmjs.com/package/nest-minio"><img src="https://img.shields.io/npm/v/nest-minio" alt="NPM Version" /></a>
-<a href="https://img.shields.io/npm/l/nest-minio"><img src="https://img.shields.io/npm/l/nest-raven.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/package/nest-minio"><img src="https://img.shields.io/npm/dm/nest-minio" alt="NPM Downloads" /></a>
+<a href="https://www.npmjs.com/package/nest-minio"><img src="https://img.shields.io/npm/v/nest-pgpromise" alt="NPM Version" /></a>
+<a href="https://img.shields.io/npm/l/nest-minio"><img src="https://img.shields.io/npm/l/nest-pgpromise.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/package/nest-minio"><img src="https://img.shields.io/npm/dm/nest-pgpromise" alt="NPM Downloads" /></a>
 
 </p>
 
@@ -48,6 +48,8 @@ You need five items in order to connect to MinIO object storage server.
 
 Provide the credentials for minio module by importing it as :
 
+## As Connection object
+
 ```javascript
 import { Module } from '@nestjs/common';
 import { NestPgpromiseClientController } from './nest-pgpromise-client.controller';
@@ -70,6 +72,27 @@ import { NestPgpromiseModule } from '../nest-pgpromise.module';
 
 });
 ```
+## As Connection string
+
+```javascript
+import { Module } from '@nestjs/common';
+import { NestPgpromiseClientController } from './nest-pgpromise-client.controller';
+import { NestPgpromiseModule } from '../nest-pgpromise.module';
+
+@Module({
+  controllers: [NestPgpromiseClientController],
+  imports: [
+    NestPgpromiseModule.register({
+      connection:"postgres://YourUserName:YourPassword@YourHost:5432/YourDatabase"
+    }),
+  ],
+})
+
+});
+```
+
+
+
 Then you can use it in the controller or service by injecting it in the controller as:
 
 ```javascript
@@ -108,4 +131,31 @@ export class NestPgpromiseClientController {
 }
 
 ```
+You can also pass in `initoptions` as supported by pg-promise. 
 
+
+```javascript
+import { Module } from '@nestjs/common';
+import { NestPgpromiseClientController } from './nest-pgpromise-client.controller';
+import { NestPgpromiseModule } from '../nest-pgpromise.module';
+
+@Module({
+  controllers: [NestPgpromiseClientController],
+  imports: [
+    NestPgpromiseModule.register({
+      connection: {
+        host: 'localhost',
+        port: 5432,
+        database: 'cmdbbtbi',
+        user: 'cmadbbtbi',
+        password: 'cghQZynG0whwtGki-ci2bpxV5Jw_5k6z',
+      },
+      initOptions:{/* initialization options */};
+    }),
+  ],
+})
+
+});
+```
+
+You can find the details about them in the [pg-promise](https://vitaly-t.github.io/pg-promise/index.html) documentation
