@@ -101,7 +101,7 @@ Then you can use it in the controller or service by injecting it in the controll
 
 ```
 
-## Quick Start Example - File Uploader
+## Quick Start Example
 This example program connects to postgres on localhost and executes a simple `select` query from table `tasks`.
 
 
