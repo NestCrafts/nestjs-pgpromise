@@ -17,7 +17,7 @@ export class NestPgpromiseService implements INestPgpromiseService {
     private _NestPgpromiseOptions: NestPgpromiseOptions,
   ) {
     this.logger = new Logger('NestPgpromiseService');
-    this.logger.log(`Options: ${JSON.stringify(this._NestPgpromiseOptions)}`);
+   
   }
 
   async getPg(): Promise<any> {
