@@ -6,6 +6,15 @@ export interface NestPgpromiseOptions {
         database: string;
         user: string;
         password: string;
+        ssl: boolean;
+        binary: boolean;
+        client_encoding: string;
+        application_name: string;
+        fallback_application_name: string;
+        idleTimeoutMillis: number;
+        max: number;
+        query_timeout: number;
+        keepAlive: boolean;
       }
     | string;
   initOptions?: {
