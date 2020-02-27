@@ -6,9 +6,9 @@
 <p align="center">pg-promise Module for Nest framework</p>
 
 <p align="center">
-<a href="https://img.shields.io/npm/v/nestjs-minio"><img src="https://img.shields.io/npm/v/nestjs-minio" alt="NPM Version" /></a>
-<a href="https://img.shields.io/npm/l/nestjs-minio"><img src="https://img.shields.io/npm/l/nestjs-minio" alt="Package License" /></a>
-<a href="https://www.npmjs.com/package/nestjs-minio"><img src="https://img.shields.io/npm/dm/nestjs-minio" alt="NPM Downloads" /></a>
+<a href="https://img.shields.io/npm/v/nestjs-pgpromise"><img src="https://img.shields.io/npm/v/nestjs-pgpromise" alt="NPM Version" /></a>
+<a href="https://img.shields.io/npm/l/nestjs-pgpromise"><img src="https://img.shields.io/npm/l/nestjs-pgpromise" alt="Package License" /></a>
+<a href="https://www.npmjs.com/package/nestjs-pgpromise"><img src="https://img.shields.io/npm/dm/nestjs-pgpromise" alt="NPM Downloads" /></a>
 
 </p>
 
