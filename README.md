@@ -6,9 +6,9 @@
 <p align="center">pg-promise Module for Nest framework</p>
 
 <p align="center">
-<a href="https://www.npmjs.com/package/nest-minio"><img src="https://img.shields.io/npm/v/nest-pgpromise" alt="NPM Version" /></a>
-<a href="https://img.shields.io/npm/l/nest-minio"><img src="https://img.shields.io/npm/l/nest-pgpromise.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/package/nest-minio"><img src="https://img.shields.io/npm/dm/nest-pgpromise" alt="NPM Downloads" /></a>
+<a href="https://www.npmjs.com/package/nest-minio"><img src="https://img.shields.io/npm/v/nestjs-pgpromise" alt="NPM Version" /></a>
+<a href="https://img.shields.io/npm/l/nest-minio"><img src="https://img.shields.io/npm/l/nestjs-pgpromise.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/package/nest-minio"><img src="https://img.shields.io/npm/dm/nestjs-pgpromise" alt="NPM Downloads" /></a>
 
 </p>
 
@@ -29,7 +29,7 @@ This document assumes that you have a working [nodejs](http://nodejs.org/) setup
 ## Download from NPM
 
 ```sh
-npm install --save nest-pgpromise
+npm install --save nestjs-pgpromise
 ```
 
 
