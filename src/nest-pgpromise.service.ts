@@ -36,8 +36,8 @@ export class NestPgpromiseService implements INestPgpromiseService {
 
       const pgp = pg(initOptions);
       this._pgMain = pgp;
-      return this._pgMain;
     }
+    return this._pgMain;
   }
 
   async getPg(): Promise<pg.IDatabase<{}>> {
