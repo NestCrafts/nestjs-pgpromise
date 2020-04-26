@@ -10,11 +10,11 @@ export class NestPgpromiseClientController {
   async index() {
     this.pg
       .any('SELECT * FROM task')
-      .then(data => {
+      .then((data) => {
         // success;
         this.logger.log(data);
       })
-      .catch(error => {
+      .catch((error) => {
         // error;
         this.logger.log(error);
       });

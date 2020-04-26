@@ -13,7 +13,7 @@ import { NestPgpromiseModule } from '../nest-pgpromise.module';
         user: 'cmdbbtbi',
         password: 'UTZll9erU8Q4Nf8EK4Twb2KFeTgVPUxp',
       },
-      initOptions: {}
+      initOptions: {},
     }),
   ],
 })
