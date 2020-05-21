@@ -1,6 +1,6 @@
 {
   "name": "nestjs-pgpromise",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "author": "Rubin Bhandari",
   "license": "MIT",
@@ -36,9 +36,8 @@
     "@nestjs/platform-express": "^7.0.9",
     "@nestjs/testing": "7.0.13",
     "@types/express": "4.17.6",
-    "@types/jest": "25.2.1",
-    "@types/node": "14.0.4",
     "@types/jest": "25.2.3",
+    "@types/node": "14.0.4",
     "@types/supertest": "2.0.9",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.5",
