@@ -25,7 +25,7 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@nestjs/common": "^7.0.13"
+    "@nestjs/common": ">7.0.13"
   },
   "dependencies": {
     "pg-promise": "^10.5.6"
