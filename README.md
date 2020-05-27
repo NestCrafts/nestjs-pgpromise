@@ -7,7 +7,6 @@
 
 <p align="center">
  <a href="https://www.npmjs.com/package/nestjs-pgpromise"><img src="https://github.com/rubiin/nestjs-pgpromise/workflows/CI/badge.svg" alt="CI" /></a> 
-  
 <a href="https://img.shields.io/npm/v/nestjs-pgpromise"><img src="https://img.shields.io/npm/v/nestjs-pgpromise" alt="NPM Version" /></a>
 <a href="https://img.shields.io/npm/l/nestjs-pgpromise"><img src="https://img.shields.io/npm/l/nestjs-pgpromise" alt="Package License" /></a>
 <a href="https://www.npmjs.com/package/nestjs-pgpromise"><img src="https://img.shields.io/npm/dm/nestjs-pgpromise" alt="NPM Downloads" /></a>
