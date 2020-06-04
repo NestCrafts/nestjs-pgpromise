@@ -35,6 +35,7 @@ export class NestPgpromiseModule {
     return {
       module: NestPgpromiseModule,
       providers: [...this.createProviders(options)],
+      inject: options.inject || [],
     };
   }
 
