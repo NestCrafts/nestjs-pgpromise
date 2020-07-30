@@ -38,7 +38,7 @@ npm install --save nestjs-pgpromise
 
 ## Initialize 
 
-You need five items in order to connect to MinIO object storage server.
+You need five items in order to connect to the PostgreSQL server.
 
 
 | Params     | Description |
