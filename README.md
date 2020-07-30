@@ -49,7 +49,7 @@ You need five items in order to connect to the PostgreSQL server.
 | username	| The username to access db.    |
 |password | The username's password |
 
-Provide the credentials for minio module by importing it as :
+Provide the credentials for pg-promise module by importing it as :
 
 ## As Connection object
 
