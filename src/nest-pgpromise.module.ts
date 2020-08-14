@@ -1,6 +1,13 @@
-import { Module, DynamicModule, Provider, Global } from '@nestjs/common';
+import {
+  Module,
+  DynamicModule,
+  Provider,
+  Global,
+  OnApplicationShutdown,
+  Inject,
+} from '@nestjs/common';
 import { NestPgpromiseService } from './nest-pgpromise.service';
-import { NEST_PGPROMISE_OPTIONS } from './constants';
+import { NEST_PGPROMISE_OPTIONS, NEST_PGPROMISE_CONNECTION } from './constants';
 import {
   NestPgpromiseOptions,
   NestPgpromiseAsyncOptions,
@@ -8,13 +15,22 @@ import {
 } from './interfaces';
 import { createNestPgpromiseProviders } from './nest-pgpromise.providers';
 import { connectionFactory } from './nest-pgpromise-connection.provider';
+import { ModuleRef } from '@nestjs/core';
 
 @Global()
 @Module({
   providers: [NestPgpromiseService, connectionFactory],
   exports: [NestPgpromiseService, connectionFactory],
 })
-export class NestPgpromiseModule {
+export class NestPgpromiseModule implements OnApplicationShutdown {
+  constructor(
+    @Inject(NEST_PGPROMISE_OPTIONS)
+    private readonly options: NestPgpromiseOptions,
+    @Inject(NEST_PGPROMISE_CONNECTION)
+    private readonly pg,
+    private readonly moduleRef: ModuleRef,
+  ) {}
+
   /**
    * Registers a configured NestPgpromise Module for import into the current module
    */
@@ -73,5 +89,14 @@ export class NestPgpromiseModule {
         await optionsFactory.createNestPgpromiseOptions(),
       inject: [options.useExisting || options.useClass],
     };
+  }
+
+  async onApplicationShutdown() {
+    // an option could be added to keepConnectionAlive
+    // if (this.options.keepConnectionAlive) {
+    //   return;
+    // }
+
+    await this.pg.$pool.end();
   }
 }
