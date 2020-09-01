@@ -499,9 +499,9 @@
     uuid "8.3.0"
 
 "@nestjs/platform-express@^7.3.1":
-  version "7.4.3"
-  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-7.4.3.tgz#6a3b8450df85fb84f0cd6cc6abe10f7a96e27105"
-  integrity sha512-CjumkTSbY9q15PlDlgwn5VSNzGJmNl8crJ17QV4ojSrgE3XYVNWO0aht4pVsjD9CXEXD8S2RZhqa4IC+k+YL7Q==
+  version "7.4.4"
+  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-7.4.4.tgz#03429ebd5ae4fe7e38556cd9af8ae38ee42e7d1f"
+  integrity sha512-LO0WuMZuP1P68t2kQbxb3GUh2SfkOGw5Ma2fR+QWNS7N63BL6Vsf/b8Ad43ht51FuVfqOQZo7AJVz8DljDRw3A==
   dependencies:
     body-parser "1.19.0"
     cors "2.8.5"
@@ -618,10 +618,10 @@
     "@types/qs" "*"
     "@types/range-parser" "*"
 
-"@types/express@4.17.7":
-  version "4.17.7"
-  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.7.tgz#42045be6475636d9801369cd4418ef65cdb0dd59"
-  integrity sha512-dCOT5lcmV/uC2J9k0rPafATeeyz+99xTt54ReX11/LObZgfzJqZNcW27zGhYyX+9iSEGXGt5qLPwRSvBZcLvtQ==
+"@types/express@4.17.8":
+  version "4.17.8"
+  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.8.tgz#3df4293293317e61c60137d273a2e96cd8d5f27a"
+  integrity sha512-wLhcKh3PMlyA2cNAB9sjM1BntnhPMiM0JOBwPBqttjHev2428MLEB4AYVN+d8s2iyCVZac+o41Pflm/ZH5vLXQ==
   dependencies:
     "@types/body-parser" "*"
     "@types/express-serve-static-core" "*"
