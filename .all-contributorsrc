@@ -15,6 +15,17 @@
         "test",
         "code"
       ]
+    },
+    {
+      "login": "mjclemente",
+      "name": "Matthew J. Clemente",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/5348419?v=4",
+      "profile": "https://blog.mattclemente.com",
+      "contributions": [
+        "infra",
+        "test",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
