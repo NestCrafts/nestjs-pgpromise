@@ -1,6 +1,6 @@
 <p align="center">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
   <a href="http://nestjs.com/" target="blank"><img src="http://kamilmysliwiec.com/public/nest-logo.png#1" alt="Nest Logo" />   </a>
 
@@ -176,6 +176,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://vitalytomilov.com"><img src="https://avatars1.githubusercontent.com/u/5108906?v=4" width="100px;" alt=""/><br /><sub><b>Vitaly Tomilov</b></sub></a><br /><a href="#infra-vitaly-t" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/rubiin/nestjs-pgpromise/commits?author=vitaly-t" title="Tests">⚠️</a> <a href="https://github.com/rubiin/nestjs-pgpromise/commits?author=vitaly-t" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/byteglory"><img src="https://avatars3.githubusercontent.com/u/72143629?v=4" width="100px;" alt=""/><br /><sub><b>Rubin shrestha</b></sub></a><br /><a href="#infra-byteglory" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/rubiin/nestjs-pgpromise/commits?author=byteglory" title="Tests">⚠️</a> <a href="https://github.com/rubiin/nestjs-pgpromise/commits?author=byteglory" title="Code">💻</a></td>
   </tr>
 </table>
 
