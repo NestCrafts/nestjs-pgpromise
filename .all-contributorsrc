@@ -26,6 +26,15 @@
         "test",
         "code"
       ]
+    },
+    {
+      "login": "nythrox",
+      "name": "Jason Santiago",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/41273690?v=4",
+      "profile": "https://github.com/nythrox",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
