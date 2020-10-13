@@ -1,6 +1,6 @@
 <p align="center">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
   <a href="http://nestjs.com/" target="blank"><img src="http://kamilmysliwiec.com/public/nest-logo.png#1" alt="Nest Logo" />   </a>
 
@@ -177,6 +177,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://vitalytomilov.com"><img src="https://avatars1.githubusercontent.com/u/5108906?v=4" width="100px;" alt=""/><br /><sub><b>Vitaly Tomilov</b></sub></a><br /><a href="#infra-vitaly-t" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/rubiin/nestjs-pgpromise/commits?author=vitaly-t" title="Tests">⚠️</a> <a href="https://github.com/rubiin/nestjs-pgpromise/commits?author=vitaly-t" title="Code">💻</a></td>
     <td align="center"><a href="https://blog.mattclemente.com"><img src="https://avatars0.githubusercontent.com/u/5348419?v=4" width="100px;" alt=""/><br /><sub><b>Matthew J. Clemente</b></sub></a><br /><a href="#infra-mjclemente" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/rubiin/nestjs-pgpromise/commits?author=mjclemente" title="Tests">⚠️</a> <a href="https://github.com/rubiin/nestjs-pgpromise/commits?author=mjclemente" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/nythrox"><img src="https://avatars2.githubusercontent.com/u/41273690?v=4" width="100px;" alt=""/><br /><sub><b>Jason Santiago</b></sub></a><br /><a href="https://github.com/rubiin/nestjs-pgpromise/commits?author=nythrox" title="Documentation">📖</a></td>
   </tr>
 </table>
 
