@@ -21,13 +21,12 @@
 
 </p>
 
-
 ## Description
+
 This's a [nest-pgpromise](https://github.com/rubiin/nest-pgpromise) module for [Nest](https://github.com/nestjs/nest).
 This quickstart guide will show you how to install and execute an example nestjs program..
 
 This document assumes that you have a working [nodejs](http://nodejs.org/) setup in place.
-
 
 ## Download from NPM
 
@@ -35,19 +34,19 @@ This document assumes that you have a working [nodejs](http://nodejs.org/) setup
 npm install --save nestjs-pgpromise
 ```
 
-
-## Initialize 
+## Initialize
 
 You need five items in order to connect to the PostgreSQL server.
 
-
-| Params     | Description |
+| Params | Description |
 | :------- | :------------ |
-| host	 | Host address. |
-|port| TCP/IP port number.|
-| database | The name of db to connect to.   |
-| username	| The username to access db.    |
-|password | The username's password |
+| host | Host IP address or URL. |
+| port | TCP/IP port number to access the database. |
+| database | The name of the database to connect to. |
+| user | The username to access the database. |
+| password | The username's password to access the database. |
+
+And you can use as well all the other parameters allowed by `pg-promise` package. See the [documentation](https://vitaly-t.github.io/pg-promise/index.html).
 
 Provide the credentials for pg-promise module by importing it as :
 
@@ -56,7 +55,7 @@ Provide the credentials for pg-promise module by importing it as :
 ```javascript
 import { Module } from '@nestjs/common';
 import { NestPgpromiseClientController } from './nest-pgpromise-client.controller';
-import { NestPgpromiseModule } from '../nest-pgpromise.module';
+import { NestPgpromiseModule } from 'nestjs-pgpromise';
 
 @Module({
   controllers: [NestPgpromiseClientController],
@@ -72,51 +71,46 @@ import { NestPgpromiseModule } from '../nest-pgpromise.module';
     }),
   ],
 })
-
-});
+export class AppModule {}
 ```
+
 ## As Connection string
 
 ```javascript
 import { Module } from '@nestjs/common';
 import { NestPgpromiseClientController } from './nest-pgpromise-client.controller';
-import { NestPgpromiseModule } from '../nest-pgpromise.module';
+import { NestPgpromiseModule } from 'nestjs-pgpromise';
 
 @Module({
   controllers: [NestPgpromiseClientController],
   imports: [
     NestPgpromiseModule.register({
-      connection:"postgres://YourUserName:YourPassword@YourHost:5432/YourDatabase"
+      connection: "postgres://YourUserName:YourPassword@YourHost:5432/YourDatabase"
     }),
   ],
 })
-
-});
+export class AppModule {}
 ```
-
-
 
 Then you can use it in the controller or service by injecting it in the controller as:
 
 ```javascript
-
-  constructor(@Inject(NEST_PGPROMISE_CONNECTION) private readonly pg) {
-
+constructor(@Inject(NEST_PGPROMISE_CONNECTION) private readonly pg: IDatabase<any>) {}
 ```
 
 ## Quick Start Example
+
 This example program connects to postgres on localhost and executes a simple `select` query from table `tasks`.
 
-
-```js
-
+```javascript
 import { Controller, Get, Inject, Logger } from '@nestjs/common';
-import { NEST_PGPROMISE_CONNECTION } from '../constants';
+import { NEST_PGPROMISE_CONNECTION } from 'nestjs-pgpromise';
+import { IDatabase } from 'pg-promise';
 
 @Controller()
 export class NestPgpromiseClientController {
   private logger = new Logger('controller');
-  constructor(@Inject(NEST_PGPROMISE_CONNECTION) private readonly pg) {}
+  constructor(@Inject(NEST_PGPROMISE_CONNECTION) private readonly pg: IDatabase<any>) {}
 
   @Get()
   async index() {
@@ -132,15 +126,40 @@ export class NestPgpromiseClientController {
       });
   }
 }
-
 ```
-You can also pass in `initoptions` as supported by pg-promise. 
 
+As `pg-promise` methods return promises, the new `async/await` syntaxis can be used.
+
+```javascript
+import { Controller, Get, Inject, Logger } from '@nestjs/common';
+import { NEST_PGPROMISE_CONNECTION } from 'nestjs-pgpromise';
+import { IDatabase } from 'pg-promise';
+
+@Controller()
+export class NestPgpromiseClientController {
+  private logger = new Logger('controller');
+  constructor(@Inject(NEST_PGPROMISE_CONNECTION) private readonly pg: IDatabase<any>) {}
+
+  @Get()
+  async index() {
+    try {
+      const data = await this.pg.any('SELECT * FROM task');
+      // success;
+      this.logger.log(data);
+    } catch(e) {
+      // error;
+      this.logger.log(error);
+    }
+  }
+}
+```
+
+You can also pass in `initoptions` as supported by pg-promise. 
 
 ```javascript
 import { Module } from '@nestjs/common';
 import { NestPgpromiseClientController } from './nest-pgpromise-client.controller';
-import { NestPgpromiseModule } from '../nest-pgpromise.module';
+import { NestPgpromiseModule } from 'nestjs-pgpromise';
 
 @Module({
   controllers: [NestPgpromiseClientController],
@@ -157,8 +176,7 @@ import { NestPgpromiseModule } from '../nest-pgpromise.module';
     }),
   ],
 })
-
-});
+export class AppModule {}
 ```
 
 You can find the details about them in the [pg-promise](https://vitaly-t.github.io/pg-promise/index.html) documentation
