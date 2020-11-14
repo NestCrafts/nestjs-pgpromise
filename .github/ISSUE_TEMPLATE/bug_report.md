@@ -2,37 +2,98 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: ''
+labels: bug
+assignees: rubiin
+
+---
+
+---
+name: "🐛 Bug Report"
+about: Report a reproducible bug or regression.
+title: ''
+labels: requires triage, bug
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+<!--
+  Please follow the template.  If you don't, your issue may be closed.
+-->
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## Bug Report
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## Current behavior
+<!-- Describe how the issue manifests. -->
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+### Expected Behavior
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+<!--
+  A clear and concise description of what you expected to happen.
+-->
 
-**Additional context**
-Add any other context about the problem here.
+
+### Actual Behavior
+
+<!--
+  A clear and concise description of what actually happened.
+
+  Please wrap any error messages or output in code tags, instead of images.
+-->
+
+```
+// include the output in code tags like these!
+```
+
+
+### Steps to Reproduce
+
+<!--
+  Your bug will be investigated much faster if we can run your code . I
+
+  Please try to provide a Minimal, Complete, and Verifiable example.
+  http://stackoverflow.com/help/mcve
+-->
+
+1.
+2.
+
+```typescript
+// insert code here
+```
+## Environment
+
+<pre><code>
+Nest version: X.Y.Z
+<!-- Check whether this is still an issue in the most recent Nest version -->
+ 
+For Tooling issues:
+- Node version: XX  <!-- run `node --version` -->
+- Platform:  <!-- Mac, Linux, Windows -->
+
+Others:
+<!-- Anything else relevant?  Operating system version, IDE, package manager, ... -->
+</code></pre>
+
+### Additional Context
+
+<!--
+  Add any other context about the bug report here.
+-->
+
+
+### Are you willing to resolve this issue by submitting a Pull Request?
+
+<!--
+  Remember that first-time contributors are welcome! 🙌
+-->
+
+- [ ] Yes, I have the time, and I know how to start.
+- [ ] Yes, I have the time, but I don't know how to start. I would need guidance.
+- [ ] No, I don't have the time, although I believe I could do it if I had the time...
+- [ ] No, I don't have the time and I wouldn't even know how to start.
+
+
+<!--
+  👋 Have a great day and thank you for the bug report!
+-->
