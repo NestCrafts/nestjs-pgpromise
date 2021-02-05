@@ -27,16 +27,16 @@
     "@nestjs/common": ">7.0.0"
   },
   "dependencies": {
-    "pg-promise": "^10.8.6"
+    "pg-promise": "^10.9.2"
   },
   "devDependencies": {
     "@nestjs/common": "^7.0.13",
-    "@nestjs/core": "^7.6.4",
-    "@nestjs/platform-express": "^7.6.4",
-    "@nestjs/testing": "7.6.8",
+    "@nestjs/core": "^7.6.11",
+    "@nestjs/platform-express": "^7.6.11",
+    "@nestjs/testing": "7.6.11",
     "@types/express": "4.17.11",
     "@types/jest": "26.0.20",
-    "@types/node": "14.14.22",
+    "@types/node": "14.14.25",
     "@types/supertest": "2.0.10",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.6.3",
