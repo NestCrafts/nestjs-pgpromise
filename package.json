@@ -1,6 +1,10 @@
 {
   "name": "nestjs-pgpromise",
+<<<<<<< HEAD
   "version": "1.4.6",
+=======
+  "version": "1.4.8",
+>>>>>>> 7b74a48 (chore(version bump): version bump)
   "description": "",
   "author": "Rubin Bhandari",
   "license": "MIT",
@@ -46,8 +50,6 @@
     "prettier": "^2.5.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.4.0",
-    "jest": "27.4.3",
-    "prettier": "2.5.1",
     "supertest": "6.1.6",
     "ts-jest": "27.1.1",
     "ts-node": "10.4.0",
