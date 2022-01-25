@@ -1,10 +1,6 @@
 {
   "name": "nestjs-pgpromise",
-<<<<<<< HEAD
-  "version": "1.4.6",
-=======
-  "version": "1.4.8",
->>>>>>> 7b74a48 (chore(version bump): version bump)
+  "version": "1.4.9",
   "description": "",
   "author": "Rubin Bhandari",
   "license": "MIT",
