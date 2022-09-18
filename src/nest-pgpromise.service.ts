@@ -1,9 +1,7 @@
-// tslint:disable: variable-name
 import { Injectable, Inject, Logger } from '@nestjs/common';
 import { NEST_PGPROMISE_OPTIONS } from './constants';
 import { NestPgpromiseOptions } from './interfaces';
 import * as pg from 'pg-promise';
-import { IClient } from 'pg-promise/typescript/pg-subset';
 
 interface INestPgpromiseService {
   getPg(): Promise<pg.IDatabase<{}>>;

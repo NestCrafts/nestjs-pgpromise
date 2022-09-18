@@ -179,6 +179,11 @@ import { NestPgpromiseModule } from 'nestjs-pgpromise';
 export class AppModule {}
 ```
 
+Note: You can then access the underlying PGP object through the $config property, for example:
+```javascript
+  new this.pg.$config.pgp.helpers.ColumnSet(['col1', 'col2']);
+```
+
 You can find the details about them in the [pg-promise](https://vitaly-t.github.io/pg-promise/index.html) documentation
 
 ## Contributors ✨
