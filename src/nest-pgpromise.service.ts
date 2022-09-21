@@ -21,7 +21,7 @@ export class NestPgpromiseService implements INestPgpromiseService {
       const initOptions = {
         ...this._NestPgpromiseOptions.initOptions,
         ...{
-          error(error, e) {
+          error(error: Error, e: pg.IEventContext) {
             const logger = new Logger('NestPgpromiseService');
             /** Connection related error */
             if (e.cn) {
