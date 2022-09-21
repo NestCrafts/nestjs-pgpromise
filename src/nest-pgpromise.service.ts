@@ -10,23 +10,31 @@ interface INestPgpromiseService {
 
 @Injectable()
 export class NestPgpromiseService implements INestPgpromiseService {
-  private readonly logger: Logger;
   private _pgConnection: Promise<pg.IDatabase<{}>>;
   private _pgMain: pg.IMain;
   constructor(
     @Inject(NEST_PGPROMISE_OPTIONS)
     private _NestPgpromiseOptions: NestPgpromiseOptions,
-  ) {
-    this.logger = new Logger('NestPgpromiseService');
-  }
+  ) {}
   getMain(): pg.IMain {
     if (!this._pgMain) {
       const initOptions = {
         ...this._NestPgpromiseOptions.initOptions,
         ...{
           error(error, e) {
+            const logger = new Logger('NestPgpromiseService');
+            /** Connection related error */
             if (e.cn) {
-              this.logger.error('EVENT:', error.message || error);
+              logger.error(`CONNECTION ERROR: ${error.message || error}`);
+            }
+            /** Query was present during error */
+            if (e.query) {
+              logger.error(`QUERY ERROR: ${error.message || error}`);
+              logger.error(`QUERY: ${e.query}`);
+            }
+            /** Error occurred inside a tagged task or transaction */
+            if (e.ctx && e.ctx.tag) {
+              logger.error(`TRANSACTION ERROR TAG: ${e.ctx.tag}`);
             }
           },
         },
