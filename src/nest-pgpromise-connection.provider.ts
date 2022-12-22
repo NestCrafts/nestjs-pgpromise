@@ -1,5 +1,6 @@
-import { NEST_PGPROMISE_CONNECTION } from './constants';
 import { NestPgpromiseService } from './nest-pgpromise.service';
+
+export const NEST_PGPROMISE_CONNECTION = 'NEST_PGPROMISE_CONNECTION';
 
 export const connectionFactory = {
   provide: NEST_PGPROMISE_CONNECTION,

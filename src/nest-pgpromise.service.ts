@@ -1,7 +1,7 @@
 import { Injectable, Inject, Logger } from '@nestjs/common';
-import { NEST_PGPROMISE_OPTIONS } from './constants';
-import { NestPgpromiseOptions } from './interfaces';
 import * as pg from 'pg-promise';
+import { NestPgpromiseOptions } from './nest-pgpromise-options.interface';
+import { MODULE_OPTIONS_TOKEN } from './nest-pgpromise-module.definition';
 
 interface INestPgpromiseService {
   getPg(): Promise<pg.IDatabase<{}>>;
@@ -14,7 +14,7 @@ export class NestPgpromiseService implements INestPgpromiseService {
   private _pgConnection: Promise<pg.IDatabase<{}>>;
   private _pgMain: pg.IMain;
   constructor(
-    @Inject(NEST_PGPROMISE_OPTIONS)
+    @Inject(MODULE_OPTIONS_TOKEN)
     private _NestPgpromiseOptions: NestPgpromiseOptions,
   ) {
     this.logger = new Logger('NestPgpromiseService');
