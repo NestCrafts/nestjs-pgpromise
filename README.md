@@ -61,6 +61,7 @@ import { NestPgpromiseModule } from 'nestjs-pgpromise';
   controllers: [NestPgpromiseClientController],
   imports: [
     NestPgpromiseModule.register({
+      isGlobal: true,
       connection: {
         host: 'localhost',
         port: 5432,
