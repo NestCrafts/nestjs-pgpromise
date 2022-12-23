@@ -6,11 +6,11 @@
 <p align="center">pg-promise Module for Nest framework</p>
 
 <p align="center">
- <a href="https://www.npmjs.com/package/nestjs-pgpromise"><img src="https://github.com/rubiin/nestjs-pgpromise/workflows/CI/badge.svg" alt="CI" /></a> 
+ <a href="https://www.npmjs.com/package/nestjs-pgpromise"><img src="https://github.com/rubiin/nestjs-pgpromise/workflows/CI/badge.svg" alt="CI" /></a>
 <a href="https://img.shields.io/npm/v/nestjs-pgpromise"><img src="https://img.shields.io/npm/v/nestjs-pgpromise" alt="NPM Version" /></a>
 <a href="https://img.shields.io/npm/l/nestjs-pgpromise"><img src="https://img.shields.io/npm/l/nestjs-pgpromise" alt="Package License" /></a>
 <a href="https://www.npmjs.com/package/nestjs-pgpromise"><img src="https://img.shields.io/npm/dm/nestjs-pgpromise" alt="NPM Downloads" /></a>
-  
+
 
 
 </p>
@@ -84,7 +84,9 @@ import { NestPgpromiseModule } from 'nestjs-pgpromise';
 @Module({
   controllers: [NestPgpromiseClientController],
   imports: [
-    NestPgpromiseModule.register({
+    NestPgpromiseModule.register(
+        isGlobal: true,
+      {
       connection: "postgres://YourUserName:YourPassword@YourHost:5432/YourDatabase"
     }),
   ],
@@ -154,7 +156,7 @@ export class NestPgpromiseClientController {
 }
 ```
 
-You can also pass in `initoptions` as supported by pg-promise. 
+You can also pass in `initoptions` as supported by pg-promise.
 
 ```javascript
 import { Module } from '@nestjs/common';
@@ -164,7 +166,9 @@ import { NestPgpromiseModule } from 'nestjs-pgpromise';
 @Module({
   controllers: [NestPgpromiseClientController],
   imports: [
-    NestPgpromiseModule.register({
+    NestPgpromiseModule.register(
+      isGlobal: true,
+      {
       connection: {
         host: 'localhost',
         port: 5432,

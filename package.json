@@ -20,6 +20,9 @@
     "postgres",
     "pg"
   ],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
