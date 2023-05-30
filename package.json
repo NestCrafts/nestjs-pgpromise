@@ -37,7 +37,7 @@
     "@nestjs/common": "^9.4.0",
     "@nestjs/core": "^9.4.0",
     "@nestjs/platform-express": "^9.4.0",
-    "@nestjs/testing": "9.4.0",
+    "@nestjs/testing": "9.4.2",
     "@types/express": "4.17.17",
     "@types/jest": "29.5.0",
     "@types/node": "18.15.11",
