@@ -59,7 +59,7 @@ export class NestPgpromiseService
 
   onModuleDestroy() {
     if (this._pgMain) {
-      this.getMain().end();
+      this._pgMain.end();
     }
   }
 }
