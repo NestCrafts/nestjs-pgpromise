@@ -16,6 +16,7 @@ export class NestPgpromiseService implements INestPgpromiseService {
     @Inject(MODULE_OPTIONS_TOKEN)
     private _NestPgpromiseOptions: NestPgpromiseOptions,
   ) {}
+  
   getMain(): pg.IMain {
     if (!this._pgMain) {
       const initOptions = {

@@ -4,6 +4,15 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
+        ports:
+          - 5432:5432
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
@@ -12,7 +21,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          cache: "pnpm"
+          cache: 'pnpm'
 
-      - run:  pnpm install --shamefully-hoist=true --frozen-lockfile
-      - run: pnpm run lint && pnpm run build
+      - run: pnpm install --shamefully-hoist=true --frozen-lockfile
+      - run: pnpm run lint && pnpm test && pnpm run build
