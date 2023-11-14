@@ -1,4 +1,4 @@
-import { Injectable, Inject, Logger } from '@nestjs/common';
+import { Injectable, Inject, Logger, OnModuleDestroy } from '@nestjs/common';
 import * as pg from 'pg-promise';
 import { NestPgpromiseOptions } from './nest-pgpromise-options.interface';
 import { MODULE_OPTIONS_TOKEN } from './nest-pgpromise-module.definition';
@@ -54,5 +54,11 @@ export class NestPgpromiseService implements INestPgpromiseService {
       );
     }
     return this._pgConnection;
+  }
+
+  onModuleDestroy() {
+    if (this._pgMain) {
+      this._pgMain.end();
+    }
   }
 }
