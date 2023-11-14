@@ -4,20 +4,19 @@ import { NestPgpromiseOptions } from './nest-pgpromise-options.interface';
 import { MODULE_OPTIONS_TOKEN } from './nest-pgpromise-module.definition';
 
 interface INestPgpromiseService {
-  getPg(): Promise<pg.IDatabase<{}>>;
+  getPg(): Promise<pg.IDatabase<any>>;
   getMain(): pg.IMain;
 }
 
 @Injectable()
-export class NestPgpromiseService
-  implements INestPgpromiseService, OnModuleDestroy
-{
-  private _pgConnection: Promise<pg.IDatabase<{}>>;
+export class NestPgpromiseService implements INestPgpromiseService {
+  private _pgConnection: Promise<pg.IDatabase<any>>;
   private _pgMain: pg.IMain;
   constructor(
     @Inject(MODULE_OPTIONS_TOKEN)
     private _NestPgpromiseOptions: NestPgpromiseOptions,
   ) {}
+
   getMain(): pg.IMain {
     if (!this._pgMain) {
       const initOptions = {
@@ -48,7 +47,7 @@ export class NestPgpromiseService
     return this._pgMain;
   }
 
-  async getPg(): Promise<pg.IDatabase<{}>> {
+  async getPg(): Promise<pg.IDatabase<any>> {
     if (!this._pgConnection) {
       this._pgConnection = this.getMain()(
         this._NestPgpromiseOptions.connection,
