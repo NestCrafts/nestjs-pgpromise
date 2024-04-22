@@ -1,6 +1,6 @@
 {
   "name": "nestjs-pgpromise",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "pg-promise module for nestjs",
   "author": "Rubin Bhandari",
   "license": "MIT",
