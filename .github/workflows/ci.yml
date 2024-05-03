@@ -28,7 +28,7 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: ultimate-nest
+          package-name: nestjs-pgpromise
       - uses: actions/checkout@v4
       - name: tag stable versions
         if: ${{ steps.release.outputs.release_created }}
