@@ -1,10 +1,10 @@
 {
   "name": "nestjs-pgpromise",
-  "version": "2.4.0",
+  "version": "2.1.1",
   "description": "pg-promise module for nestjs",
   "author": "Rubin Bhandari",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
@@ -20,11 +20,10 @@
     "postgres",
     "pg"
   ],
-  "main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"files": [
-	  "dist"
-	],
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },

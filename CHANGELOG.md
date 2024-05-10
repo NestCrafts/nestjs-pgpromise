@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/rubiin/nestjs-pgpromise/compare/v2.1.0...v2.1.1) (2024-05-10)
+
+
+### Bug Fixes
+
+* Update package.json ([3f5634c](https://github.com/rubiin/nestjs-pgpromise/commit/3f5634c9d4fe1f58b11fdd952940e12a59c99100))
+
 ## [2.1.0](https://github.com/rubiin/nestjs-pgpromise/compare/2.0.1...v2.1.0) (2024-05-03)
 
 
