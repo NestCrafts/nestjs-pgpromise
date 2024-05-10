@@ -5,15 +5,13 @@
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es6",
+    "skipLibCheck": true,
+    "target": "es2021",
     "sourceMap": false,
-    "outDir": "./dist",
-    "rootDir": "./src",
     "baseUrl": "./",
-    "noLib": false,
-    "noImplicitAny": false,
-    "skipLibCheck": true
+    "incremental": true,
+    "newLine":"lf"
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
