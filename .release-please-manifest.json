@@ -1,0 +1,13 @@
+{
+  // if this is the first time running `manifest-pr` on a repo
+  // this key will limit how far back (exclusive) to pull commits
+  // for conventional commit parsing. Once release-please has generated
+  // at least one release PR, this setting will subsequently be ignored.
+  // release-please will check for a manifest file at the bootstrap-sha
+  // and if it doesn't find one it will fallback to checking at HEAD.
+  // Notes:
+  //   - full sha required.
+  //   - only applicable at top-level config.
+  "bootstrap-sha": "e7d7d3f369ace022008d3f706a27aefee7c98362"
+
+}
