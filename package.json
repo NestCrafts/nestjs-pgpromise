@@ -5,9 +5,13 @@
   "author": "Rubin Bhandari",
   "license": "MIT",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rimraf ./dist && tsc -p ./tsconfig.build.json",
-    "prepare": "npm run build",
+    "prepack": "npm run build",
     "format:check": "oxfmt --check **/*.ts",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -18,10 +22,6 @@
     "nestjs",
     "postgres",
     "pg"
-  ],
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
   ],
   "publishConfig": {
     "access": "public"
