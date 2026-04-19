@@ -11,10 +11,7 @@
 <a href="https://img.shields.io/npm/l/nestjs-pgpromise"><img src="https://img.shields.io/npm/l/nestjs-pgpromise" alt="Package License" /></a>
 <a href="https://www.npmjs.com/package/nestjs-pgpromise"><img src="https://img.shields.io/npm/dm/nestjs-pgpromise" alt="NPM Downloads" /></a>
 
-
-
 </p>
-
 
 <p align="center">
 <a href="https://www.buymeacoffee.com/XbgWxt567" target="_blank"><img src="https://i.imgur.com/CahshSS.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
@@ -38,12 +35,12 @@ npm install --save nestjs-pgpromise
 
 You need five items in order to connect to the PostgreSQL server.
 
-| Params | Description |
-| :------- | :------------ |
-| host | Host IP address or URL. |
-| port | TCP/IP port number to access the database. |
-| database | The name of the database to connect to. |
-| user | The username to access the database. |
+| Params   | Description                                     |
+| :------- | :---------------------------------------------- |
+| host     | Host IP address or URL.                         |
+| port     | TCP/IP port number to access the database.      |
+| database | The name of the database to connect to.         |
+| user     | The username to access the database.            |
 | password | The username's password to access the database. |
 
 And you can use as well all the other parameters allowed by `pg-promise` package. See the [documentation](https://vitaly-t.github.io/pg-promise/index.html).
@@ -58,19 +55,19 @@ import { NestPgpromiseClientController } from './nest-pgpromise-client.controlle
 import { NestPgpromiseModule } from 'nestjs-pgpromise';
 
 @Module({
-  controllers: [NestPgpromiseClientController],
-  imports: [
-    NestPgpromiseModule.register({
-      isGlobal: true,
-      connection: {
-        host: 'localhost',
-        port: 5432,
-        database: 'cmdbbtbi',
-        user: 'cmadbbtbi',
-        password: 'cghQZynG0whwtGki-ci2bpxV5Jw_5k6z',
-      },
-    }),
-  ],
+	controllers: [NestPgpromiseClientController],
+	imports: [
+		NestPgpromiseModule.register({
+			isGlobal: true,
+			connection: {
+				host: 'localhost',
+				port: 5432,
+				database: 'cmdbbtbi',
+				user: 'cmadbbtbi',
+				password: 'cghQZynG0whwtGki-ci2bpxV5Jw_5k6z',
+			},
+		}),
+	],
 })
 export class AppModule {}
 ```
@@ -185,8 +182,9 @@ export class AppModule {}
 ```
 
 Note: You can then access the underlying PGP object through the $config property, for example:
+
 ```javascript
-  new this.pg.$config.pgp.helpers.ColumnSet(['col1', 'col2']);
+new this.pg.$config.pgp.helpers.ColumnSet(['col1', 'col2']);
 ```
 
 You can find the details about them in the [pg-promise](https://vitaly-t.github.io/pg-promise/index.html) documentation

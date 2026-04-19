@@ -1,22 +1,16 @@
 {
-  "extends": "@rubiin/tsconfig",
-  "compilerOptions": {
-    "sourceMap": false,
-    "newLine": "lf",
-    "module": "node16",
-    "moduleResolution": "node16",
-    "target": "ES2020",
-    "lib": ["ES2020"],
-    "types": ["node", "jest"],
-    "declaration": true,
-    "declarationMap": true,
-    "rootDir": "./src",
-  },
-  "include": [
-    "src/**/*"
-, "tests/nest-pgpromise.service.spec.ts"  ],
-  "exclude": [
-    "node_modules",
-    "tests/*.spec.ts"
-  ]
+	"extends": "@rubiin/tsconfig",
+	"compilerOptions": {
+		"sourceMap": true,
+		"newLine": "lf",
+		"module": "node16",
+		"moduleResolution": "node16",
+		"target": "ES2020",
+		"lib": ["ES2020"],
+		"declaration": true,
+		"declarationMap": true,
+		"rootDir": "./src"
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "tests/*.spec.ts"]
 }

@@ -1,55 +1,41 @@
 {
-  "files": [
-    "README.md"
-  ],
-  "imageSize": 100,
-  "commit": false,
-  "contributors": [
-    {
-      "login": "vitaly-t",
-      "name": "Vitaly Tomilov",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/5108906?v=4",
-      "profile": "http://vitalytomilov.com",
-      "contributions": [
-        "infra",
-        "test",
-        "code"
-      ]
-    },
-    {
-      "login": "mjclemente",
-      "name": "Matthew J. Clemente",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/5348419?v=4",
-      "profile": "https://blog.mattclemente.com",
-      "contributions": [
-        "infra",
-        "test",
-        "code"
-      ]
-    },
-    {
-      "login": "nythrox",
-      "name": "Jason Santiago",
-      "avatar_url": "https://avatars2.githubusercontent.com/u/41273690?v=4",
-      "profile": "https://github.com/nythrox",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "Hekkfern",
-      "name": "Hector",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/55917369?v=4",
-      "profile": "https://github.com/Hekkfern",
-      "contributions": [
-        "doc"
-      ]
-    }
-  ],
-  "contributorsPerLine": 7,
-  "projectName": "nestjs-pgpromise",
-  "projectOwner": "rubiin",
-  "repoType": "github",
-  "repoHost": "https://github.com",
-  "skipCi": true
+	"files": ["README.md"],
+	"imageSize": 100,
+	"commit": false,
+	"contributors": [
+		{
+			"login": "vitaly-t",
+			"name": "Vitaly Tomilov",
+			"avatar_url": "https://avatars1.githubusercontent.com/u/5108906?v=4",
+			"profile": "http://vitalytomilov.com",
+			"contributions": ["infra", "test", "code"]
+		},
+		{
+			"login": "mjclemente",
+			"name": "Matthew J. Clemente",
+			"avatar_url": "https://avatars0.githubusercontent.com/u/5348419?v=4",
+			"profile": "https://blog.mattclemente.com",
+			"contributions": ["infra", "test", "code"]
+		},
+		{
+			"login": "nythrox",
+			"name": "Jason Santiago",
+			"avatar_url": "https://avatars2.githubusercontent.com/u/41273690?v=4",
+			"profile": "https://github.com/nythrox",
+			"contributions": ["doc"]
+		},
+		{
+			"login": "Hekkfern",
+			"name": "Hector",
+			"avatar_url": "https://avatars3.githubusercontent.com/u/55917369?v=4",
+			"profile": "https://github.com/Hekkfern",
+			"contributions": ["doc"]
+		}
+	],
+	"contributorsPerLine": 7,
+	"projectName": "nestjs-pgpromise",
+	"projectOwner": "rubiin",
+	"repoType": "github",
+	"repoHost": "https://github.com",
+	"skipCi": true
 }
