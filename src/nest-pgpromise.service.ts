@@ -1,28 +1,33 @@
-import { Injectable, Inject, Logger, OnModuleDestroy } from '@nestjs/common';
-import * as pg from 'pg-promise';
-import { NestPgpromiseOptions } from './nest-pgpromise-options.interface';
+import { Inject, Injectable, Logger } from '@nestjs/common';
+import pgPromise, {
+  IDatabase,
+  IEventContext,
+  IMain,
+  IInitOptions,
+} from 'pg-promise';
 import { MODULE_OPTIONS_TOKEN } from './nest-pgpromise-module.definition';
+import { NestPgpromiseOptions } from './nest-pgpromise-options.interface';
 
 interface INestPgpromiseService {
-  getPg(): Promise<pg.IDatabase<any>>;
-  getMain(): pg.IMain;
+  getPg(): Promise<IDatabase<any>>;
+  getMain(): IMain;
 }
 
 @Injectable()
 export class NestPgpromiseService implements INestPgpromiseService {
-  private _pgConnection: Promise<pg.IDatabase<any>>;
-  private _pgMain: pg.IMain;
+  private _pgConnection?: Promise<IDatabase<any>>;
+  private _pgMain?: IMain;
   constructor(
     @Inject(MODULE_OPTIONS_TOKEN)
     private _NestPgpromiseOptions: NestPgpromiseOptions,
   ) {}
 
-  getMain(): pg.IMain {
+  getMain(): IMain {
     if (!this._pgMain) {
-      const initOptions = {
+      const initOptions: IInitOptions = {
         ...this._NestPgpromiseOptions.initOptions,
         ...{
-          error(error: Error, e: pg.IEventContext) {
+          error(error: Error, e: IEventContext) {
             const logger = new Logger('NestPgpromiseService');
             /** Connection related error */
             if (e.cn) {
@@ -41,14 +46,17 @@ export class NestPgpromiseService implements INestPgpromiseService {
         },
       };
 
-      const pgp = pg(initOptions);
+      const pgp = pgPromise(initOptions);
       this._pgMain = pgp;
     }
     return this._pgMain;
   }
 
-  async getPg(): Promise<pg.IDatabase<any>> {
+  async getPg(): Promise<IDatabase<any>> {
     if (!this._pgConnection) {
+      if (!this._NestPgpromiseOptions.connection) {
+        throw new Error('NestPgpromiseOptions.connection is required');
+      }
       this._pgConnection = this.getMain()(
         this._NestPgpromiseOptions.connection,
       );
