@@ -1,5 +1,5 @@
-import { ConfigurableModuleBuilder } from '@nestjs/common'
-import { NestPgpromiseOptions } from './nest-pgpromise-options.interface'
+import { ConfigurableModuleBuilder } from '@nestjs/common';
+import { NestPgpromiseOptions } from './nest-pgpromise-options.interface';
 
 export const { ConfigurableModuleClass, MODULE_OPTIONS_TOKEN } =
   new ConfigurableModuleBuilder<NestPgpromiseOptions>()
@@ -12,4 +12,4 @@ export const { ConfigurableModuleClass, MODULE_OPTIONS_TOKEN } =
         global: extras.isGlobal,
       }),
     )
-    .build()
+    .build();
