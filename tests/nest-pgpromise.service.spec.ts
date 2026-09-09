@@ -1,6 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { NestPgpromiseService } from '../src/nest-pgpromise.service';
 import { ITask } from 'pg-promise';
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
 describe('NestPgpromiseService', () => {
 	let service: NestPgpromiseService;
