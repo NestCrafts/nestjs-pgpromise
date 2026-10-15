@@ -8,6 +8,7 @@
     "target": "ES2022",
     "declarationMap": true,
     "rootDir": "./src",
+    "isolatedModules": false,
     "types": ["vitest/globals", "node"]
   },
   "include": ["src/**/*"],

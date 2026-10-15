@@ -21,23 +21,21 @@ export class NestPgpromiseService implements INestPgpromiseService {
     if (!this._pgMain) {
       const initOptions: IInitOptions = {
         ...this._NestPgpromiseOptions.initOptions,
-        ...{
-          error(error: Error, e: IEventContext) {
-            const logger = new Logger('NestPgpromiseService');
-            /** Connection related error */
-            if (e.cn) {
-              logger.error(`CONNECTION ERROR: ${error.message || error}`);
-            }
-            /** Query was present during error */
-            if (e.query) {
-              logger.error(`QUERY ERROR: ${error.message || error}`);
-              logger.error(`QUERY: ${e.query}`);
-            }
-            /** Error occurred inside a tagged task or transaction */
-            if (e.ctx && e.ctx.tag) {
-              logger.error(`TRANSACTION ERROR TAG: ${e.ctx.tag}`);
-            }
-          },
+        error(error: Error, e: IEventContext) {
+          const logger = new Logger('NestPgpromiseService');
+          /** Connection related error */
+          if (e.cn) {
+            logger.error(`CONNECTION ERROR: ${error.message || error}`);
+          }
+          /** Query was present during error */
+          if (e.query) {
+            logger.error(`QUERY ERROR: ${error.message || error}`);
+            logger.error(`QUERY: ${e.query}`);
+          }
+          /** Error occurred inside a tagged task or transaction */
+          if (e.ctx && e.ctx.tag) {
+            logger.error(`TRANSACTION ERROR TAG: ${e.ctx.tag}`);
+          }
         },
       };
 

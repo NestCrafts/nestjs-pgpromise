@@ -1,4 +1,8 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+# commitizen needs an interactive terminal to prompt for the commit type.
+# In CI, IDEs and scripts there is no TTY, so skip it rather than abort the
+# commit. The subshell keeps the failed redirect from killing this hook.
+if ! (exec 0</dev/tty) 2>/dev/null; then
+	exit 0
+fi
 
-exec < /dev/tty && git cz --hook || true
+pnpm exec cz --hook "$1"

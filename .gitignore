@@ -4,6 +4,9 @@
 *.js
 *.d.ts
 .eslintcache
+
+# husky
+.husky/_
 # Logs
 logs
 *.log
