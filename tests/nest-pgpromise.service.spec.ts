@@ -6,6 +6,14 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 describe('NestPgpromiseService', () => {
   let service: NestPgpromiseService;
 
+  const connection = {
+    host: process.env.PGHOST ?? 'localhost',
+    port: Number(process.env.PGPORT ?? 5432),
+    database: process.env.PGDATABASE ?? 'postgres',
+    user: process.env.PGUSER ?? 'postgres',
+    password: process.env.PGPASSWORD ?? 'postgres',
+  };
+
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [],
@@ -13,14 +21,7 @@ describe('NestPgpromiseService', () => {
         {
           provide: NestPgpromiseService,
           useFactory: () => {
-            return new NestPgpromiseService({
-              connection: {
-                port: 5432,
-                database: 'postgres',
-                user: 'postgres',
-                password: 'postgres',
-              },
-            });
+            return new NestPgpromiseService({ connection });
           },
         },
       ],

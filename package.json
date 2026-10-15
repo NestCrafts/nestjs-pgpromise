@@ -26,6 +26,7 @@
     "format": "oxfmt",
     "format:check": "oxfmt --check **/*.ts",
     "test": "vitest",
+    "test:ci": "vitest run",
     "test:watch": "vitest watch",
     "test:cov": "vitest run --coverage",
     "coveralls": "pnpm coverage --coverageReporters=text-lcov | coveralls"
